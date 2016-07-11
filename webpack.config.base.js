@@ -5,13 +5,16 @@ var ExtractTextWepbacp = require("extract-text-webpack-plugin");
 module.exports = {
     cache: true,
     debug: true,
-    //devtool: "cheap-module-eval-source-map",
+    // entry: {
+    //     "app": "./src/index.js"
+    // },
     entry: {
         "app": "./src/index.js"
     },
     output: {
         filename: "[name].js",
-        path: __dirname + "/dist"
+        path: __dirname + "/dist",
+        publicPath:"/dist/"
     },
     module: {
         loaders: [
@@ -23,7 +26,16 @@ module.exports = {
                     cacheDirectory: true
                 },
                 exclude: /node_modules/
+            },
+            // {
+            //     test: /.less$/,
+            //     loader: ExtractTextPlugin.extract("style", "css!less")
+            // },
+            {
+                test: /.css$/,
+                loader: "css"
             }
         ]
-    }
+    },
+    plugins: []
 }
