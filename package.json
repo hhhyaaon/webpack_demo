@@ -1,14 +1,15 @@
 {
-  "name": "synapse_h5",
+  "name": "wenpack_demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "remove": "rimraf dist",
+    "clean": "rimraf dist",
     "start": "node devServer.js",
+    "build": "npm run clean && webpack --config webpack.config.base.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "IDB",
+  "author": "hhhyaaon",
   "license": "ISC",
   "dependencies": {
     "react": "^15.2.0",
@@ -25,7 +26,6 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "rimraf": "^2.5.3",
     "webpack": "^1.13.1",
-    "webpack-dev-middleware": "^1.6.1",
-    "webpack-hot-middleware": "^2.12.1"
+    "webpack-dev-server": "^1.14.1"
   }
 }

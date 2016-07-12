@@ -1,4 +1,4 @@
 
 export function getName() {
-    console.log("module_a_list11");
+    console.log("module_a_list");
 }
