@@ -11,7 +11,8 @@ var compiler = webpack(webpackCfg);
 
 //init server
 var app = new webpackDevServer(compiler, {
-    publicPath: webpackCfg.output.publicPath
+    publicPath: webpackCfg.output.publicPath,
+    hot: true
 });
 
 
